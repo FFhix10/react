@@ -176,7 +176,7 @@ jobs:
         run: kill ${{ steps.storybook.outputs.pid }}
       - name: Upload report
         if: ${{ always() }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: vrt-${{ matrix.shard }}
           path: .playwright/report
@@ -222,13 +222,13 @@ jobs:
         run: kill ${{ steps.storybook.outputs.pid }}
       - name: Upload axe reports
         if: ${{ always() }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: axe-${{ matrix.shard }}
           path: .playwright/axe
       - name: Upload report
         if: ${{ always() }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: aat-${{ matrix.shard }}
           path: .playwright/report
