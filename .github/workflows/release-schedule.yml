@@ -18,7 +18,7 @@ jobs:
       conductor: ${{ steps.pagerduty.outputs.result }}
     steps:
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
       - name: Fetch user from pagerduty schedule
@@ -56,7 +56,7 @@ jobs:
       issues: write
     steps:
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
       - name: Install packages for github-script
